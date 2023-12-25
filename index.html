@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Test</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <h1>Tämä on yleinen kuntosalilaskuri!</h1>
+    </header>
+
+    <main class="container">
+        <div class="counter-container">
+            <h2 class="counter" id="laskuri1">0</h2>
+            <button class="increment-btn" onclick="increment('laskuri1')">TOISTONAPPI</button>
+            <br>
+            <button class="reset-btn" onclick="reset('laskuri1')">RESET</button>
+        </div>
+
+        <div class="counter-container">
+            <h2 class="counter" id="laskuri2">0</h2>
+            <button class="increment-btn" onclick="increment('laskuri2')">SARJANAPPI</button>
+            <br>
+            <button class="reset-btn" onclick="reset('laskuri2')">RESET</button>
+        </div>
+
+        <div id="kello"></div>
+
+        <canvas id="analog-clock" width="200" height="200"></canvas>
+
+        <button id="disappear-btn" onclick="disappear()">KATOAMISNAPPI</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 NICKYNOSTRESS</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
