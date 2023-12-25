@@ -22,6 +22,11 @@ function reset(counterId) {
   }
 }
 
+function disappear() {
+  const disappearBtn = document.getElementById('disappear-btn');
+  disappearBtn.style.display = 'none'; // Set the display property to 'none' to hide the button
+}
+
 function displayTime() {
   const currentTime = new Date();
   const hours = currentTime.getHours();
