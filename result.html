@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,27 @@
     <title>Result Page</title>
     <link rel="stylesheet" href="result.css">
 </head>
+
 <body>
 
     <header>
         <h1>Tämä on tulossivu!</h1>
     </header>
 
-    <main> 
-        <div id="kello"></div>
+    <main>
+        <div class="container">
+            <div class="clock-container">
+                <div id="kello"></div>
+            </div>
 
-        <canvas id="analog-clock" width="200" height="200"></canvas>
+            <div class="clock-container">
+                <canvas id="analog-clock" width="200" height="200"></canvas>
+            </div>
 
-        <a href="index.html" class="result-btn">Takaisin laskurisivulle!</a>
+            <div class="return-btn-container">
+                <a href="index.html" class="result-btn">Takaisin laskurisivulle!</a>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -27,4 +37,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
