@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Kuntosalilaskuri</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
     <header>
@@ -34,7 +36,8 @@
 
         <button id="disappear-btn" onclick="disappear()">KATOAMISNAPPI</button>
 
-        <a href="result.html" class="result-btn">Mene tulossivulle!</a>
+        <!-- Pass counts to result.html using query parameters -->
+        <a href="result.html?count1=0&count2=0" class="result-btn" id="result-link">Mene tulossivulle!</a>
     </main>
 
     <footer>
@@ -43,4 +46,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>

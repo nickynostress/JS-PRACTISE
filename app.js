@@ -91,4 +91,10 @@ function getSecondAngle(seconds) {
   return (360 / 60) * seconds;
 }
 
+function updateResultLink() {
+  const resultLink = document.getElementById('result-link');
+  resultLink.href = `result.html?count1=${count1}&count2=${count2}`;
+}
+
 setInterval(displayTime, 1000);
+setInterval(updateResultLink, 1000); // Update result link every second

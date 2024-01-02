@@ -16,19 +16,14 @@
     </header>
 
     <main>
-        <div class="container">
-            <div class="clock-container">
-                <div id="kello"></div>
-            </div>
+        <div id="kello"></div>
 
-            <div class="clock-container">
-                <canvas id="analog-clock" width="200" height="200"></canvas>
-            </div>
+        <canvas id="analog-clock" width="130" height="130"></canvas>
 
-            <div class="return-btn-container">
-                <a href="index.html" class="result-btn">Takaisin laskurisivulle!</a>
-            </div>
-        </div>
+        <p>Count from Laskuri1: <span id="count1"></span></p>
+        <p>Count from Laskuri2: <span id="count2"></span></p>
+
+        <a href="index.html" class="result-btn">Takaisin laskurisivulle!</a>
     </main>
 
     <footer>
@@ -36,6 +31,25 @@
     </footer>
 
     <script src="app.js"></script>
+    <script>
+        // Function to parse URL parameters
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Retrieve counts from URL and display them
+        const count1 = getParameterByName('count1');
+        const count2 = getParameterByName('count2');
+
+        document.getElementById('count1').innerText = count1;
+        document.getElementById('count2').innerText = count2;
+    </script>
 </body>
 
 </html>
