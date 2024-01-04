@@ -1,6 +1,8 @@
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
     margin: 0;
     background-image: url('space.jpg');
@@ -9,7 +11,6 @@ body {
 }
 
 .container {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,6 +62,11 @@ header {
     font-size: small;
     border-bottom: 3px solid white;
     border-top: 3px solid white;
+    width: 100%;
+    position: fixed;
+    top: 0; /* Set top to 0 to place it at the top of the page */
+    left: 0; /* Ensure it is at the leftmost position */
+    z-index: 1000; /* Set a high z-index to ensure it's above other elements */
 }
 
 footer {

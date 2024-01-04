@@ -43,12 +43,15 @@
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
 
-        // Retrieve counts from URL and display them
-        const count1 = getParameterByName('count1');
-        const count2 = getParameterByName('count2');
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Retrieve counts from URL and display them
+            const count1 = getParameterByName('count1');
+            const count2 = getParameterByName('count2');
 
-        document.getElementById('count1').innerText = count1;
-        document.getElementById('count2').innerText = count2;
+            document.getElementById('count1').innerText = count1;
+            document.getElementById('count2').innerText = count2;
+        });
     </script>
 </body>
 
