@@ -16,16 +16,8 @@
     </header>
 
     <main>
-        <div id="kello" class="center"></div>
-
-        <div class="analog-clock center">
-            <canvas id="analog-clock" width="150" height="150"></canvas>
-        </div>
-
-        <br>
-
-        <p>TOISTOJEN MÄÄRÄ: <span id="count1"></span></p>
-        <p>SARJOJEN MÄÄRÄ: <span id="count2"></span></p>
+        <p>TOISTOJEN MÄÄRÄ: <span id="count1" class="count"></span></p>
+        <p>SARJOJEN MÄÄRÄ: <span id="count2" class="count"></span></p>
 
         <a href="index.html" class="result-btn">Takaisin laskurisivulle!</a>
     </main>
@@ -36,7 +28,7 @@
 
     <script src="app.js"></script>
     <script>
-        // Function to parse URL parameters
+        // Function to parse URL parameters!
         function getParameterByName(name, url) {
             if (!url) url = window.location.href;
             name = name.replace(/[\[\]]/g, '\\$&');
@@ -47,9 +39,9 @@
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
 
-        // Wait for the DOM to be fully loaded
+        // Wait for the DOM to be fully loaded!
         document.addEventListener('DOMContentLoaded', function () {
-            // Retrieve counts from URL and display them
+            // Retrieve counts from URL and display them!
             const count1 = getParameterByName('count1');
             const count2 = getParameterByName('count2');
 
