@@ -18,8 +18,9 @@
     <main>
         <p>TOISTOJEN MÄÄRÄ: <span id="count1" class="count"></span></p>
         <p>SARJOJEN MÄÄRÄ: <span id="count2" class="count"></span></p>
+        <p>YHTEENSÄ: <span id="count3" class="count"></span></p>
 
-        <a href="index.html" class="result-btn">Takaisin laskurisivulle!</a>
+        <a href="index.html" class="result-btn">TAKAISIN LASKURISIVULLE</a>
     </main>
 
     <footer>
@@ -28,7 +29,7 @@
 
     <script src="app.js"></script>
     <script>
-        // Function to parse URL parameters!
+        // Function to parse URL parameters
         function getParameterByName(name, url) {
             if (!url) url = window.location.href;
             name = name.replace(/[\[\]]/g, '\\$&');
@@ -39,14 +40,16 @@
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
 
-        // Wait for the DOM to be fully loaded!
+        // Wait for the DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', function () {
-            // Retrieve counts from URL and display them!
+            // Retrieve counts from URL and display them
             const count1 = getParameterByName('count1');
             const count2 = getParameterByName('count2');
+            const count3 = count1 * count2;
 
             document.getElementById('count1').innerText = count1;
             document.getElementById('count2').innerText = count2;
+            document.getElementById('count3').innerText = count3;
         });
     </script>
 </body>
