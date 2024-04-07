@@ -3,7 +3,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background: url('space.jpg') center/cover;
+  background: url(/pic/space.jpg) center/cover;
 }
 
 header {
