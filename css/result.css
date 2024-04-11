@@ -5,7 +5,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    background-image: url('space.jpg');
+    background-image: url('../pic/space.jpg');
     background-size: cover;
     background-position: center;
 }
